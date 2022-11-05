@@ -5,9 +5,12 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:opexq/utils/utils.dart';
 
+import '../data/menu_data.dart';
+import '../models/menu_model.dart';
+import '../services/api_service.dart';
+import '../utils/dictionary.dart';
 
 class AppController extends GetxController {
-
   /// Create a [AndroidNotificationChannel] for heads up notifications
   late AndroidNotificationChannel channel;
 
@@ -21,6 +24,42 @@ class AppController extends GetxController {
   }
 
   void loadMenu() async {
+    ApiRequest execRequest = ApiRequest(
+        action: "Execute",
+        object: "AppMenu",
+        baseObject: "STDAPPMENUQ",
+        parameters: {});
+    ApiResponse response =
+        await Get.find<ApiService>().httpPostApiToken(execRequest);
+    if (response.success) {
+      List list;
+      if (response.resultSets!.isNotEmpty) {
+        list = response.resultSets![0];
+        if (list.isNotEmpty) {
+          menuData = (list).map((i) => Menu.fromMap(i)).toList().cast<Menu>();
+        } else {
+          showAlert("Menu data is empty");
+        }
+      }
+
+      if (response.resultSets!.length > 1) {
+        list = response.resultSets![1];
+        if (list.isNotEmpty) {
+          Map<String, dynamic> language = jsonDecode(list[0]["VALUE"]);
+          Map<String, String> language1 =
+              language.map((key, value) => MapEntry(key, value!.toString()));
+          Map<String, Map<String, String>> map = {
+            Get.find<ApiService>().box.lang: language1
+          };
+          Get.find<Dictionary>().map = map;
+          Get.clearTranslations();
+          Get.addTranslations(map);
+        } else {
+          showAlert("Dictionary data is empty");
+        }
+      }
+    }
+
     setupFCM();
     //getFcmToken();
   }
@@ -39,8 +78,6 @@ class AppController extends GetxController {
   //   Menu item = menuData.singleWhere((element) => element.name == "Hotel");
   //   //goTo(item);
   // }
-
-  
 
   Map<String, dynamic>? convertMessage(RemoteMessage message) {
     try {
