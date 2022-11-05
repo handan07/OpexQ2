@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1768951832/android.audio_session.iml" filepath="$PROJECT_DIR$/.idea/modules/1768951832/android.audio_session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/564294737/android.firebase_core.iml" filepath="$PROJECT_DIR$/.idea/modules/564294737/android.firebase_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/518322383/android.firebase_messaging.iml" filepath="$PROJECT_DIR$/.idea/modules/518322383/android.firebase_messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1500724291/android.flutter_inappwebview.iml" filepath="$PROJECT_DIR$/.idea/modules/-1500724291/android.flutter_inappwebview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1345764744/android.flutter_keyboard_visibility.iml" filepath="$PROJECT_DIR$/.idea/modules/-1345764744/android.flutter_keyboard_visibility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2078212708/android.flutter_local_notifications.iml" filepath="$PROJECT_DIR$/.idea/modules/2078212708/android.flutter_local_notifications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1336153409/android.flutter_plugin_android_lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/-1336153409/android.flutter_plugin_android_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-877027270/android.image_picker_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-877027270/android.image_picker_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1422759525/android.just_audio.iml" filepath="$PROJECT_DIR$/.idea/modules/1422759525/android.just_audio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-4635537/android.path_provider_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-4635537/android.path_provider_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-483064661/android.url_launcher_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-483064661/android.url_launcher_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1682683143/android.video_player_android.iml" filepath="$PROJECT_DIR$/.idea/modules/1682683143/android.video_player_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1794609348/android.wakelock.iml" filepath="$PROJECT_DIR$/.idea/modules/-1794609348/android.wakelock.iml" />
+    </modules>
+  </component>
+</project>
